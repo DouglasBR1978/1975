@@ -16,7 +16,7 @@ namespace PaymentContext.Tests
     public class StudentQueriesTests
     {
         // Red, Green, Refactor
-        private IList<Student> _students;
+        private IList<Student> _students = new List<Student>();
 
         public StudentQueriesTests()
         {
@@ -24,7 +24,7 @@ namespace PaymentContext.Tests
             for (var i = 0; i <= 10; i++)
             {
                 _students.Add(new Student(
-                    new Name("Aluno", i.ToString()),
+                    new Name("Aluno" +  i.ToString(), "Silva" + i.ToString()),
                     new Document("1111111111" + i.ToString(), EDocumentType.CPF),
                     new Email(i.ToString() + "@balta.io")
                 ));
